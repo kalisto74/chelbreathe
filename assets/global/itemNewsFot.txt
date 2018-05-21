@@ -1,0 +1,3 @@
+          <div class="carousel-item [[+idx:is=`1`:then=`active`]]">
+            <img class="card-img-top img-fluid w-100" src="[[+image]]" alt="[[+title]]" title="[[+pagetitle]]"/>
+          </div>

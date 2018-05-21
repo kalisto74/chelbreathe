@@ -1,0 +1,31 @@
+https://itchief.ru/lessons/bootstrap/build-project-with-gulp
+
+npm i -g npm-check-updates
+npm-check-updates -u
+npm install
+
+git init
+git status
+npm i
+bower i
+npm i -g bower
+npm i -g gulp npm-check-updates
+gulp
+
+npm install gulp --save-dev // установка gulp
+npm install browser-sync --save-dev // установка browser-sync (плагина для gulp)
+npm install del --save-dev // установка del (плагина для gulp)
+npm install gulp-autoprefixer --save-dev // установка gulp-autoprefixer (плагина для gulp)
+npm install gulp-cache --save-dev // установка gulp-cache
+npm install gulp-clean-css --save-dev // установка gulp-clean-css
+npm install gulp-imagemin --save-dev // установка gulp-imagemin
+npm install gulp-plumber --save-dev // установка gulp-plumber
+npm install gulp-coffee --save-dev
+npm install gulp-rigger --save-dev // установка gulp-rigger
+npm install gulp-sass --save-dev // установка gulp-sass
+npm install gulp-sourcemaps --save-dev // установка gulp-sourcemaps
+npm install gulp-uglify --save-dev // установка gulp-uglify
+npm install imagemin-jpeg-recompress --save-dev // установка imagemin-jpeg-recompress
+npm install imagemin-pngquant --save-dev // установка imagemin-pngquant
+npm i gulp-concat --save-dev
+npm i del --save-dev

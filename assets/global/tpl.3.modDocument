@@ -1,0 +1,115 @@
+<!--  Новость детальное -->
+<div class="container">
+  <div class="row mb-3 mt-5">
+    <div class="col-xs-12 col-md-6">
+       [[pdoCrumbs?
+        &from=`0`
+        &showAtHome=`0`
+        &showHome=`1`
+        &exclude=`[[*id]]`
+      ]]
+    </div>
+    <div class="col col-md-6 text-right">
+      [[pdoNeighbors? 
+        &tplPrev=`@INLINE <a href="[[+link]]" class="nav-prev"><i class="fa fa-angle-left"></i></a>` 
+        &tplNext=`@INLINE <a href="[[+link]]" class="nav-next"><i class="fa fa-angle-right"></i></a>`
+        &tplWrapper=`@INLINE <div class="neighbors"><div class="post-navigation">[[+prev]]<a href="[[~[[*parent]]]]"><i class="fa fa-list"></i></a>[[+next]]</div></div>`
+      ]]
+    </div>
+  </div>
+  [[*video:!empty=`<div class="row pb-3">
+    <h1>[[*pagetitle]]</h1>
+  </div>`]]
+  <div class="row pb-3">
+    [[*video:!empty=`<div class="embed-responsive embed-responsive-16by9"><iframe src="[[*video]]" allowfullscreen></iframe></div>`]]
+    [[*video:is=' ':then=`<div class="card bg-dark text-white">
+      [[*stylePost:is=`1`:then=`
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            [[getImageList?
+              &tvname=`foto`
+              &tpl=`itemNewsFoto`
+            ]]
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>`:else=`[[getImageList?
+          &tvname=`foto`
+          &tpl=`@CODE:<img class="card-img-top img-fluid" src="[[+image]]" alt="[[+title]]" />`
+          &limit=`1`
+        ]]`]]
+      <div class="card-img-overlay1"><h1 class="text-white card-title">[[*pagetitle]]</h1></div>
+    </div>`]]
+  </div>
+  <div class="row pt-4 pb-2">
+    <div class="col mb-2">
+      [[*content]]
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="post-meta">
+      <p class="text-muted mb-2">
+        <small class="mr-1"><i class="fa fa-calendar"></i> [[*publishedon:strtotime:date=`%d %b, %Y`]]</small>
+        <small class="mr-1"><i class="fas fa-eye"></i> [[!HitsPage? &saveTv=`true`]]</small>
+      </p>
+    </div>
+  </div>
+  <div class="row mb-5">
+    <!-- соцсети -->
+    <div class="social-list pt-4">
+      <script type="text/javascript">
+        (function () {
+          if (window.pluso)
+            if (typeof window.pluso.start == "function") return;
+          if (window.ifpluso == undefined) {
+            window.ifpluso = 1;
+            var d = document,
+              s = d.createElement('script'),
+              g = 'getElementsByTagName';
+            s.type = 'text/javascript';
+            s.charset = 'UTF-8';
+            s.async = true;
+            s.src = ('https:' == window.location.protocol ? 'https' : 'http') + '://share.pluso.ru/pluso-like.js';
+            var h = d[g]('body')[0];
+            h.appendChild(s);
+          }
+        })();
+      </script>
+      <div class="pluso" data-background="transparent" data-options="medium,square,line,horizontal,nocounter,theme=06" data-services="vkontakte,odnoklassniki,facebook,twitter,google"></div>
+    </div>
+  </div>
+  <div class="row mt-3 mb-4">
+    [[*tags:!empty=`<div class="tags">
+      [[!tolinks? &items=`[[*tags]]` &target=`14` &tpl=`tagItem` &inputDelim=`,` &outputDelim=` `]]
+    </div>`]]
+  </div>
+</div>
+
+  <!--  Рекомендуем еще -->
+<div class="container-fluid">
+  <div class="row mt-2 justify-content-center">
+    <div class="col-8">
+      <h2 class="text-left">Рекомендуем еще</h2>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col pt-5 pb-5">
+      <div class="projects-wrapper">
+        <div class="owl-demo owl-carousel projects_slider">
+          [[!pdoResources? 
+            &showHidden=`1`
+            &parents=`[[*parent]]`  
+            &tpl=`recomendItem`
+            &includeTVs=`foto`
+          ]]
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

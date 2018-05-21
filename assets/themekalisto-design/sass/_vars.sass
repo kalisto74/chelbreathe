@@ -1,0 +1,40 @@
+$main-family: 'Roboto Condensed', sans-serif
+$zag-family: 'Roboto Condensed', sans-serif 
+$font-size: em(18px)
+$font-weight: 400
+$line-height-content: 1.8
+
+$colordark: #262626
+$darkLight: lighten($colordark, 40% )
+$primary: #B8D237
+$primaryLight: lighten($primary, 6% )
+$primarySecond: #82A43E
+$primaryThird: #40632E
+$colorGray: #f2f3f5
+$colorRed: #ff2402
+
+$white: #fff
+
+$success:       #738d00
+$success-hover: lighten($success, 10%)
+$info:          #05bca9
+$info-hover:    lighten($info, 10%)
+$warning:       #f89406
+$warning-hover: lighten($warning, 10%)
+$danger:        #c10841
+$danger-hover:  lighten($danger, 10%)
+
+$media-md: 1199px
+$media-sm: 991px
+$media-xs: 767px
+
+%font-awesome
+  font: normal normal normal 14px/1 FontAwesome
+  font-size: inherit
+  text-rendering: auto
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  transform: translate(0, 0)
+
+=mt($time)
+	transition: all $time ease
