@@ -6,6 +6,14 @@ npm install
 
 git init
 git status
+git add .
+git commit -m'First Commit'
+git log
+git commit -a -m'prise write'
+git log -p
+git log -2 //2 последних commit
+
+
 npm i
 bower i
 npm i -g bower

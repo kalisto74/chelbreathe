@@ -16,8 +16,9 @@ var path = {
   src: {
     html: 'assets/themekalisto-design/*.html',
     js: ['assets/themekalisto-design/libs/jquery-3.2.1.min.js',
-        'assets/themekalisto-design/libs/bootstrap/popper.min.js',
-        'assets/themekalisto-design/libs/bootstrap/bootstrap.min.js',
+        'assets/themekalisto-design/libs/bootstrap/bootstrap.bundle.min.js',
+        //'assets/themekalisto-design/libs/bootstrap/popper.min.js',
+        //'assets/themekalisto-design/libs/bootstrap/bootstrap.min.js',
         'assets/themekalisto-design/libs/magnific-popup/jquery.magnific-popup.min.js',
         'assets/themekalisto-design/libs/owl-carousel/owl.carousel.min.js',
         'assets/themekalisto-design/libs/jquery.carouFredSel-6.2.1-packed.js',
